@@ -1,22 +1,15 @@
-export default class People {
-    constructor (public name: string, public lastName: string, public year: number) {}
+class CreateEmployee {
+    constructor(public name: string, public profession: string) {}
 
-    public getName(): void {
-        console.log(`${this.name} ${this.lastName} tem ${this.year} anos`);
-    }
-
-    public setName(): string {
-        return this.name;
-    }
+    public getEmployee(): object { 
+        return { name: this.name, profession: this.profession };
+    };
 }
 
-class Job extends People {
-    constructor (name: string, lastName: string, year: number, public job: string) {
-        super(name, lastName, year);
-    }
-}
+const employees = [];
 
-const peopleOne = new Job('gabriel', 'lazari', 24, 'developer');
-peopleOne.getName();
-const name = peopleOne.setName();
-console.log(name);
+employees.push(new CreateEmployee('Gabriel', 'Software Engineer').getEmployee());
+employees.push(new CreateEmployee('Tainá', 'Software Engineer').getEmployee());
+employees.push(new CreateEmployee('Marcos', 'Software Engineer').getEmployee());
+
+console.log(employees);

@@ -1,26 +1,16 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class People {
-    constructor(name, lastName, year) {
+class CreateEmployee {
+    constructor(name, profession) {
         this.name = name;
-        this.lastName = lastName;
-        this.year = year;
+        this.profession = profession;
     }
-    getName() {
-        console.log(`${this.name} ${this.lastName} tem ${this.year} anos`);
+    getEmployee() {
+        return { name: this.name, profession: this.profession };
     }
-    setName() {
-        return this.name;
-    }
+    ;
 }
-exports.default = People;
-class Job extends People {
-    constructor(name, lastName, year, job) {
-        super(name, lastName, year);
-        this.job = job;
-    }
-}
-const peopleOne = new Job('gabriel', 'lazari', 24, 'developer');
-peopleOne.getName();
-const name = peopleOne.setName();
-console.log(name);
+const employees = [];
+employees.push(new CreateEmployee('Gabriel', 'Software Engineer').getEmployee());
+employees.push(new CreateEmployee('Tainá', 'Software Engineer').getEmployee());
+employees.push(new CreateEmployee('Marcos', 'Software Engineer').getEmployee());
+console.log(employees);
