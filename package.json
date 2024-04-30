@@ -2,6 +2,7 @@
   "name": "life_water",
   "version": "1.0.0",
   "description": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,12 +21,16 @@
   },
   "homepage": "https://github.com/NewMiniBoss/life_water#readme",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "live-server": "^1.2.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.2",
     "nodemon": "^3.1.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/mongoose": "^5.11.97",
     "@types/node": "^20.12.7"
   }
 }
